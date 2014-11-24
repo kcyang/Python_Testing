@@ -53,40 +53,42 @@ def set_sub_sheet(workbook, sub_array, json_info, limit_number, one_page_number)
     row_cnt = 0
     page_cnt = 1
     new_page = False
-
+    #TODO >> 여기서부터, 진행, 하나 건너뛰는 문제 해결할 것.
     '''#1. sub array 의 것을 하나씩 빼내면서, '''
     for sub_items in sub_array:
-
         '''#2. 꺼낸 한 개의 Record 에서 Field 하나 씩 꺼냄. '''
         '''** 행의 수가 첫 번째 페이지를 넘겼을 때, '''
         if row_cnt > limit_number:
             print u'사이즈가 그 담 페이지로 넘어가겠네'
 
+            if row_cnt > (limit_number+one_page_number*page_cnt):
+                new_page = True
+
             if page_cnt > 1 and new_page:
                 workbook.add_sheet(workbook.worksheets[1], page_cnt)
-                new_page = True
+                new_page = False
+                page_cnt += 1
 
             curr_ws = workbook.worksheets[page_cnt]
 
-            for sub_key in sub_items:
+            for sub_key in sub_items.keys():
                 if sub_key == '_id' or sub_key == '__v':
                     continue
                 _sub_key = ['_', sub_key]
                 next_sub_key = ''.join(_sub_key)
 
                 if next_sub_key in json_info:
-                    curr_ws[get_next(json_info[next_sub_key], row_cnt-limit_number)] = sub_array[sub_items]
+                    curr_ws[get_next(json_info[next_sub_key], row_cnt-limit_number)] = sub_items[sub_key]
 
-        '''행의 수가 첫 번째 페이지를 넘기지 않을 때 또는 첫번째에 해당되는 값은'''
         else:
-
-            for sub_key in sub_items:
+            '''행의 수가 첫 번째 페이지를 넘기지 않을 때 또는 첫번째에 해당되는 값은'''
+            for sub_key in sub_items.keys():
                 if sub_key == '_id' or sub_key == '__v':
                     continue
                 #print sub_items[sub_key]
                 #설정파일에 array 의 key 가 있으면...
-                if sub_items in json_info:
-                    ws[get_next(json_info[sub_items], row_cnt)] = sub_array[sub_items]
+                if sub_key in json_info:
+                    ws[get_next(json_info[sub_key], row_cnt)] = sub_items[sub_key]
 
         row_cnt += 1
 
