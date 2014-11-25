@@ -58,7 +58,7 @@ def set_sub_sheet(workbook, sub_array, json_info, limit_number, one_page_number)
     for sub_items in sub_array:
         '''#2. 꺼낸 한 개의 Record 에서 Field 하나 씩 꺼냄. '''
         '''** 행의 수가 첫 번째 페이지를 넘겼을 때, '''
-        if row_cnt > limit_number:
+        if row_cnt >= limit_number:
             print u'사이즈가 그 담 페이지로 넘어가겠네'
 
             if row_cnt > (limit_number+one_page_number*page_cnt):
