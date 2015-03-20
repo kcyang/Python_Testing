@@ -1,0 +1,18 @@
+{
+    "V101" : {
+        "001": {
+            "length": "",
+            "value": "",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "2",
+            "value": "11",
+            "blank": "0",
+            "field": "BID_TOT_AMT",
+            "multi": "Y"
+        }
+    }
+}

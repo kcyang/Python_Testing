@@ -1,0 +1,339 @@
+{
+    "HEADER" : {
+        "001": {
+            "length": "2",
+            "value": "11",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "4",
+            "value": "V101",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "13",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "004": {
+            "length": "2",
+            "value": "41",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "005": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "field": "",
+            "multi": "",
+            "desc":"신고구분"
+        },
+        "006": {
+            "length": "1",
+            "value": "8",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "007": {
+            "length": "6",
+            "value": "201501",
+            "blank": "",
+            "field": "",
+            "multi": "",
+            "desc":"년도+기수"
+        },
+        "008": {
+            "length": "4",
+            "value": "01",
+            "blank": "0",
+            "field": "",
+            "multi": "",
+            "desc":"신고차수"
+        },
+        "009": {
+            "length": "4",
+            "value": "0001",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "010": {
+            "length": "20",
+            "value": "홈택스ID",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "011": {
+            "length": "13",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": "",
+            "desc":"Corporation No."
+        },
+        "012": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "013": {
+            "length": "6",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "014": {
+            "length": "4",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "015": {
+            "length": "5",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "016": {
+            "length": "5",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "017": {
+            "length": "30",
+            "value": "부가세회사.회사이름",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "018": {
+            "length": "30",
+            "value": "부가세회사.오너이름",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "019": {
+            "length": "70",
+            "value": "부가세회사.주소",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "020": {
+            "length": "14",
+            "value": "부가세회사.전화번호",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "021": {
+            "length": "70",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "022": {
+            "length": "14",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "023": {
+            "length": "30",
+            "value": "Business Type",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "024": {
+            "length": "50",
+            "value": "Business Class",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "025": {
+            "length": "7",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": "",
+            "desc": "부가세회사.Business Area"
+        },
+        "026": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": "",
+            "desc": "부가세시작일.YYYYMMDD"
+        },
+        "027": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": "",
+            "desc": "부가세조회마감일.YYYYMMDD"
+        },
+        "028": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": "",
+            "desc": "생성일자.YYYYMMDD"
+        },
+        "029": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": "",
+            "desc": "부가세회사.Date of Opening"
+        },
+        "030": {
+            "length": "1",
+            "value": "N",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "031": {
+            "length": "14",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": "",
+            "desc": "부가세회사.Sup empmobile"
+        },
+        "032": {
+            "length": "4",
+            "value": "9000",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "033": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "034": {
+            "length": "50",
+            "value": "부가세회사.Sup empemail",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        },
+        "035": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": "",
+            "desc": "정기신고100/기한후신고200"
+        },
+        "036": {
+            "length": "51",
+            "value": "",
+            "blank": " ",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "V101" : {
+        "001": {
+            "length": "2",
+            "value": "17",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "4",
+            "value": "V101",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "",
+            "value": "",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "004": {
+            "length": "",
+            "value": "",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "005": {
+            "length": "",
+            "value": "",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "006": {
+            "length": "",
+            "value": "",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "007": {
+            "length": "",
+            "value": "",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "008": {
+            "length": "",
+            "value": "",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "009": {
+            "length": "",
+            "value": "",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "010": {
+            "length": "",
+            "value": "",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        }
+    }
+}

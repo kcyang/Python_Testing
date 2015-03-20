@@ -1,0 +1,38 @@
+{
+
+    "TOTAL_COUNT" : "H12",
+    "TOTAL_AMOUNT" : "M12",
+    "TOTAL_TAX" : "R12",
+    "CASH_COUNT" : "H13",
+    "CASH_AMOUNT_TOTAL" : "M13",
+    "CASH_TAX_TOTAL" : "R13",
+    "DRIVER_COUNT" : "H14",
+    "DRIVER_AMOUNT_TOTAL" : "M14",
+    "DRIVER_TAX_TOTAL" : "R14",
+    "BUSINESS_CARD_COUNT" : "H15",
+    "BUSINESS_CARD_AMOUNT_TOTAL" : "M15",
+    "BUSINESS_CARD_TAX_TOTAL" : "R15",
+    "CARD_COUNT" : "H16",
+    "CARD_AMOUNT_TOTAL" : "M16",
+    "CARD_TAX_TOTAL" : "R16",
+
+    "CARD_NUMBER" : "C12",
+    "BUSINESS_NO" : "H20",
+    "CNT" : "L20",
+    "SUPPLY_AMOUNT" : "O20",
+    "TAX_AMOUNT" : "S20",
+
+    "_CARD_NUMBER" : "C11",
+    "_BUSINESS_NO" : "H11",
+    "_CNT" : "L11",
+    "_SUPPLY_AMOUNT" : "O11",
+    "_TAX_AMOUNT" : "S11",
+
+    "company_name":"F7",
+    "name":"Q7",
+    "company_address":"F8",
+    "vat_code":"Q8",
+
+    "limit_no":"15",
+    "page_no":"25"
+}

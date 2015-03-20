@@ -1,0 +1,21 @@
+{
+    "_DOC_NAME":"C15",
+    "_ISSUE_MAN":"G15",
+    "_ISSUE_DATE":"J15",
+    "_SHIP_DATE":"L15",
+    "_CURRENCY CODE":"N15",
+    "_EXCHANGE RATE":"P15",
+    "_THIS_INTRO_FOR_AMT":"R15",
+    "_THIS_INTRO_WON_AMT":"T15",
+    "_THIS_SINGO_FOR_AMT":"V15",
+    "_THIS_SINGO_WON_AMT":"X15",
+    "_REMARK":"Z15",
+
+    "limit_no":"34",
+    "page_no":"34",
+
+    "company_name":"Q5",
+    "name":"F6",
+    "company_address":"Q6",
+    "vat_code":"F5"
+}
