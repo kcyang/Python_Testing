@@ -1,0 +1,31 @@
+{
+    "BSE":{
+        "server": "127.0.0.1",
+        "ports": "3000",
+        "enabled": true,
+        "ssl":false
+    },
+    "servers":{
+        "nav":{
+            "ip" : "nav.bsecamp.net",
+            "port" : "1433",
+            "instance" : "KIMEX150417",
+            "company" : "KIMEX",
+            "vat_table" : "B_KoreanVAT Entry",
+            "user" : "sa",
+            "password": "bse0706!@#$"
+        },
+        "mongo":{
+            "ip" : "127.0.0.1",
+            "port" : "27017",
+            "instance" : "BSEVAT"
+        }
+    },
+    "excel":{
+        "template_path": "D:\\",
+        "result_path"  : "D:\\XLSTREAM\\"
+    },
+    "VAT":{
+        "company":"MAIN"
+    }
+}
