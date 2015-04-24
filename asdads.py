@@ -1,18 +1,8 @@
 # -*- coding: utf-8 -*-
-
-"""
-부가세 파일 신고를 위한, 파일 생성 Application,
-Node.js 에서 해당 요청이 들어온 후에, Python 을 통해
-실행이 된다.
-"""
-
 import sys
 
 sys.path.append(r'C:\Python27\Lib')
 sys.path.append(r'C:\Python27\Lib\site-packages')
-
-#reload(sys)
-#sys.setdefaultencoding('utf-8')
 
 import pymongo
 import json
@@ -37,11 +27,6 @@ _V106 = {}
 _V164_1 = {}
 _V174_1 = {}
 
-'''
-텍스트만 가져오는 구문,
-/[^a-z|^A-Z|^0-9]/gi,''
-'''
-
 
 def get_only_text(orig_str):
 
@@ -54,10 +39,6 @@ def get_only_text(orig_str):
         return ''.join(string_)
 
     return orig_str
-
-'''
-회사정보를 가져오는 구문,
-'''
 
 
 def get_company(company_code):
@@ -79,12 +60,6 @@ def get_company(company_code):
     return 0
 
 
-'''
-Company json 파일을 읽어서 객체를 넘겨주는 함수,
-여기서 Exception 또는 Validation 처리도 진행해야 됨.
-'''
-
-
 def get_config_obj(json_name):
     file_path = ''.join([os.getcwd(), '\\config\\', json_name, '.json'])
     try:
@@ -93,23 +68,17 @@ def get_config_obj(json_name):
 
         return json_data
     except EnvironmentError as e:
-        print u'EnvironmentError >>>>> ', str(e)
+        print 'EnvironmentError >>>>> ', str(e)
     except:
-        print u'Uncaught Error', sys.exc_info()[0]
+        print 'Uncaught Error', sys.exc_info()[0]
 
     return 0
-
-
-'''
-Mongo 에 접속해서, 접속한 결과 Collections 을
-리턴하는 Function.
-'''
 
 
 def db_connection(document_name, company_name):
     try:
         if document_name == '':
-            raise TypeError(u'Document name has not defined')
+            raise TypeError('Document name has not defined')
 
         client = pymongo.MongoClient()
         db = client[company_name]
@@ -121,10 +90,6 @@ def db_connection(document_name, company_name):
     except TypeError as e:
         print 'Exception :: ', str(e)
 
-'''
-테이블의 값을 가져오는 구문, 필요한 값을 가져온다.
-'''
-
 
 def get_table_data(company_name, document_name, ret_key):
     print 'Company Name..', company_name, 'Document Name...', document_name, 'Key....[', ret_key, ']'
@@ -134,13 +99,6 @@ def get_table_data(company_name, document_name, ret_key):
     return documents
 
 
-'''
-대상의 모든 데이터를 한꺼번에 가져와서 한 Dictionary 에 담아서 리턴
-@param company_name  회사이름으로, Mongo Database Name
-@param ret_key 년도/기수/정기신고 에 대한 키값
-@param target_list 대상 Document 목록 (이는 Mongo의 Collection 에 해당함)
-'''
-
 
 def get_target_data(company_name, ret_key, target_list):
     print 'Company_name > ', company_name, 'Retrieve Key...>', ret_key, 'Target List..', target_list
@@ -148,7 +106,6 @@ def get_target_data(company_name, ret_key, target_list):
     if target_list is None or '':
         raise ValueError('Target Value is not defined.')
 
-    #ret_key 에는 년도/기수까지만 받아서, target_list 의 값과 합해서 키를 만들 것.
     _result = {}
 
     for target_value in target_list:
@@ -168,16 +125,10 @@ def get_target_data(company_name, ret_key, target_list):
     return _result
 
 
-'''
-파일경로를 받아서, 해당 경로에 있는 Json 을 Object 로 변환하여
-리턴하는 Function.
-'''
-
-
 def get_json_obj(file_path):
     try:
         if file_path == '':
-            raise TypeError(u'File path has not defined')
+            raise TypeError('File path has not defined')
         with open(file_path) as jsonObj:
             json_data = json.load(jsonObj)
 
@@ -188,22 +139,17 @@ def get_json_obj(file_path):
         print 'Exception :: ', str(e)
 
 
-'''
-파일에 한 라인을 넣기....
-'''
-
 
 def write_line(_define, _file_name):
 
     if _define is None or '':
         raise ValueError('JSON Value is not defined..')
 
-    #키 값을 Tuple 에 담아서 Sorting 한다.
+
     _define_keys = tuple(_define.keys())
     _sorted_keys = sorted(_define_keys)
     _report = []
 
-    #Sorting 한 순서대로 라인을 만든다.
     with open(_file_name, 'a') as f:
         for define_items in _sorted_keys:
             _line_define = _define[define_items]
@@ -215,22 +161,12 @@ def write_line(_define, _file_name):
         f.write(unicode(''.join(_report), 'cp949').encode('utf-8'))
 
 
-'''
-값 채우기
-@param _field_value 정의된 값
-@param _len 필드의 길이
-@param _blank 빈 값에 넣기
-@param _line 미리 선언한 라인
-'''
-
-
 def fill_line(_field_value, _len, _blank, _line):
     if _field_value is None:
         return
     if _field_value == '':
         return
 
-    #필드의 길이를 잰다.
     if isinstance(_field_value, Number):
         _field_value = str(_field_value)
 
@@ -242,19 +178,14 @@ def fill_line(_field_value, _len, _blank, _line):
 
     _len_value = len(_field_value)
 
-    #값이 정의된 길이보다 길면, 에러...
     if _len_value > int(_len):
         raise ValueError('bigger than pre defined value....')
 
     if not _len_value == 0:
-        #필드 값이 숫자형인 경우,
         if _blank == '0':
-            #숫자로 바꿔서, 양수음수 판단하고,
             _field_value_l = float(_field_value)
             if _field_value_l < 0:
-                #음수의 경우, 절대값으로 바꿔서 STR로 변경.
                 _field_value = str(long(abs(_field_value_l)))
-                #맨 앞에 음수 flag 를 붙인다.
                 _line[0] = '-'
             else:
                 _field_value = float(_field_value)
@@ -281,16 +212,20 @@ def fill_line(_field_value, _len, _blank, _line):
                     continue
                 _line[idx] = items
             '''
+
+            #_temp_text = unicode(get_only_text(_field_value)).encode('cp949')
             _temp_text = get_only_text(_field_value)
+            print 'XXX > ', str(_temp_text) , 'LEN ..> ', len(_temp_text)
+
             _temp_text = unicode(_temp_text).encode('cp949')
+
+            print 'XXX > ', str(_temp_text) , 'LEN ..> ', len(_temp_text)
+            #_temp_text = unicode(_temp_text,'cp949').encode('utf-8')
+            print 'XXX > ', str(_temp_text) , 'LEN ..> ', len(_temp_text)
 
             _list_value = list(_temp_text)
             for idx, items in enumerate(_list_value):
                 _line[idx] = items
-
-'''
-필요한 값과, 구조를 받아서 Line 을 생성하는 Function
-'''
 
 
 def make_line(_define):
@@ -307,28 +242,21 @@ def make_line(_define):
     global _V164_1
     global _V174_1
 
-    # 넘어온 Parameter 를 체크한다.
     if _define is None or '':
-        raise ValueError(u'넘겨온 값이 없습니다. make_line')
+        raise ValueError('make_line')
 
-    # 리턴할 값 초기화
     _line = []
     _len = _define['length']
 
     try:
-        # 길이 값 점검.
         if _len is None or int(_len) == 0:
-            raise ValueError(u'길이 값이 정의되지 않았습니다')
-
-        # 길이 만큼 공간을 넣어준다.
+            raise ValueError('xxxxxxxxxxxxxxxxxxxxxxx')
         _blank = _define['blank']
         if _blank == '':
             _blank = ' '
 
         for i in range(int(_len)):
             _line.append(_blank.encode('utf-8'))
-
-        #값의 길이를 측정해서,
 
         _field_value = _define['value']
 
@@ -399,7 +327,6 @@ def make_line(_define):
 
             print 'Field Value..........>', _db_field_value
 
-            # 멀티키 / 소수점 처리필요
             if 'multi' in _define:
                 if _define['multi'] == 'Y':
                     _temp = int(_db_field_value)
@@ -433,8 +360,6 @@ def make_line(_define):
                         _multi_str = str(_temp)
 
                     if 'dpoint' in _define:
-                        # dpoint 만큼 0 으로 채워넣는다.
-
                         if int(_define.get('dpoint')) > 0:
                             _result = ['0'] * int(_define['dpoint'])
 
@@ -459,11 +384,6 @@ def make_line(_define):
         print 'Type Error : ', str(e)
 
     return ''.join(_line)
-
-
-'''
-기본정보 만들기.
-'''
 
 
 def make_bse(vat_key):
@@ -553,12 +473,10 @@ def make_v101_1(flag_, type_, _define, _file_name, _uptae, _jonmok, _upjong, _am
             "AMT": str(_amt)
         }
 
-        #키 값을 Tuple 에 담아서 Sorting 한다.
         _define_keys = tuple(_define.keys())
         _sorted_keys = sorted(_define_keys)
         _report = []
 
-        #Sorting 한 순서대로 라인을 만든다.
         with open(_file_name, 'a') as f:
             for define_items in _sorted_keys:
                 _line_define = _define[define_items]
@@ -589,12 +507,10 @@ def make_v101_2(type_, _define, _file_name, _amt, _tax):
             "TAX": str(_tax)
         }
 
-        #키 값을 Tuple 에 담아서 Sorting 한다.
         _define_keys = tuple(_define.keys())
         _sorted_keys = sorted(_define_keys)
         _report = []
 
-        #Sorting 한 순서대로 라인을 만든다.
         with open(_file_name, 'a') as f:
             for define_items in _sorted_keys:
                 _line_define = _define[define_items]
@@ -625,12 +541,10 @@ def make_v101_3(type_, _define, _file_name, _amt, _tax):
             "TAX": str(_tax)
         }
 
-        #키 값을 Tuple 에 담아서 Sorting 한다.
         _define_keys = tuple(_define.keys())
         _sorted_keys = sorted(_define_keys)
         _report = []
 
-        #Sorting 한 순서대로 라인을 만든다.
         with open(_file_name, 'a') as f:
             for define_items in _sorted_keys:
                 _line_define = _define[define_items]
@@ -640,11 +554,6 @@ def make_v101_3(type_, _define, _file_name, _amt, _tax):
 
             _report.append('\n')
             f.write(unicode(''.join(_report), 'cp949').encode('utf-8'))
-
-'''
-make_v104_1(_json.get('V104_1'), 'test.txt', _v104)
-for ... 반복 레코드용
-'''
 
 
 def make_v104_1(_define, _file_name, _v104):
@@ -658,12 +567,10 @@ def make_v104_1(_define, _file_name, _v104):
     for _v104_item in _v104:
         _V104_1 = _v104_item
 
-        #키 값을 Tuple 에 담아서 Sorting 한다.
         _define_keys = tuple(_define.keys())
         _sorted_keys = sorted(_define_keys)
         _report = []
 
-        #Sorting 한 순서대로 라인을 만든다.
         with open(_file_name, 'a') as f:
             for define_items in _sorted_keys:
                 _line_define = _define[define_items]
@@ -680,12 +587,10 @@ def make_one_record(_define, _file_name):
     if _define is None or '':
         raise ValueError('JSON Value is not defined..')
 
-    #키 값을 Tuple 에 담아서 Sorting 한다.
     _define_keys = tuple(_define.keys())
     _sorted_keys = sorted(_define_keys)
     _report = []
 
-    #Sorting 한 순서대로 라인을 만든다.
     with open(_file_name, 'a') as f:
         for define_items in _sorted_keys:
             _line_define = _define[define_items]
@@ -695,10 +600,6 @@ def make_one_record(_define, _file_name):
 
         _report.append('\n')
         f.write(unicode(''.join(_report), 'cp949').encode('utf-8'))
-
-'''
-105반복 레코드용
-'''
 
 
 def make_v105_1(_define, _file_name, _v105):
@@ -712,12 +613,10 @@ def make_v105_1(_define, _file_name, _v105):
     for _v105_item in _v105:
         _V105_1 = _v105_item
 
-        #키 값을 Tuple 에 담아서 Sorting 한다.
         _define_keys = tuple(_define.keys())
         _sorted_keys = sorted(_define_keys)
         _report = []
 
-        #Sorting 한 순서대로 라인을 만든다.
         with open(_file_name, 'a') as f:
             for define_items in _sorted_keys:
                 _line_define = _define[define_items]
@@ -727,10 +626,6 @@ def make_v105_1(_define, _file_name, _v105):
 
             _report.append('\n')
             f.write(unicode(''.join(_report), 'cp949').encode('utf-8'))
-
-'''
-109반복 레코드용
-'''
 
 
 def make_v109_3(_define, _file_name, _v109):
@@ -744,12 +639,10 @@ def make_v109_3(_define, _file_name, _v109):
     for _v109_item in _v109:
         _V109_3 = _v109_item
 
-        #키 값을 Tuple 에 담아서 Sorting 한다.
         _define_keys = tuple(_define.keys())
         _sorted_keys = sorted(_define_keys)
         _report = []
 
-        #Sorting 한 순서대로 라인을 만든다.
         with open(_file_name, 'a') as f:
             for define_items in _sorted_keys:
                 _line_define = _define[define_items]
@@ -760,10 +653,6 @@ def make_v109_3(_define, _file_name, _v109):
             _report.append('\n')
             f.write(unicode(''.join(_report), 'cp949').encode('utf-8'))
 
-
-'''
-110반복 레코드용
-'''
 
 
 def make_v110_3(_define, _file_name, _v110):
@@ -777,12 +666,10 @@ def make_v110_3(_define, _file_name, _v110):
     for _v110_item in _v110:
         _V110_3 = _v110_item
 
-        #키 값을 Tuple 에 담아서 Sorting 한다.
         _define_keys = tuple(_define.keys())
         _sorted_keys = sorted(_define_keys)
         _report = []
 
-        #Sorting 한 순서대로 라인을 만든다.
         with open(_file_name, 'a') as f:
             for define_items in _sorted_keys:
                 _line_define = _define[define_items]
@@ -792,10 +679,6 @@ def make_v110_3(_define, _file_name, _v110):
 
             _report.append('\n')
             f.write(unicode(''.join(_report), 'cp949').encode('utf-8'))
-
-'''
-106반복 레코드용
-'''
 
 
 def make_v106(_define, _file_name, _v106):
@@ -809,12 +692,10 @@ def make_v106(_define, _file_name, _v106):
     for _v106_item in _v106:
         _V106 = _v106_item
 
-        #키 값을 Tuple 에 담아서 Sorting 한다.
         _define_keys = tuple(_define.keys())
         _sorted_keys = sorted(_define_keys)
         _report = []
 
-        #Sorting 한 순서대로 라인을 만든다.
         with open(_file_name, 'a') as f:
             for define_items in _sorted_keys:
                 _line_define = _define[define_items]
@@ -824,12 +705,6 @@ def make_v106(_define, _file_name, _v106):
 
             _report.append('\n')
             f.write(unicode(''.join(_report), 'cp949').encode('utf-8'))
-
-
-'''
-164반복 레코드용
-'''
-
 
 def make_v164(_define, _file_name, _v164):
     global _V164_1
@@ -842,12 +717,10 @@ def make_v164(_define, _file_name, _v164):
     for _v164_item in _v164:
         _V164_1 = _v164_item
 
-        #키 값을 Tuple 에 담아서 Sorting 한다.
         _define_keys = tuple(_define.keys())
         _sorted_keys = sorted(_define_keys)
         _report = []
 
-        #Sorting 한 순서대로 라인을 만든다.
         with open(_file_name, 'a') as f:
             for define_items in _sorted_keys:
                 _line_define = _define[define_items]
@@ -870,12 +743,10 @@ def make_v174(_define, _file_name, _v174):
     for _v174_item in _v174:
         _V174_1 = _v174_item
 
-        #키 값을 Tuple 에 담아서 Sorting 한다.
         _define_keys = tuple(_define.keys())
         _sorted_keys = sorted(_define_keys)
         _report = []
 
-        #Sorting 한 순서대로 라인을 만든다.
         with open(_file_name, 'a') as f:
             for define_items in _sorted_keys:
                 _line_define = _define[define_items]
@@ -897,24 +768,16 @@ def make_vat_file(target_list, vat_key, company_code):
         print 'Document Name ::', target_list, 'VATKEY ::', vat_key
         file_path = ''.join([os.getcwd(), '\\config\\_Report.json'])
 
-        # Company 정보 가져오기
         _company = get_company(company_code)
         #print 'Company Information .. ', _company
-        # Mongo에 있는 대상의 값을 모두 가져오기.
         _mongo = get_target_data(company_code, vat_key, target_list)
         #print 'Mongo Database Information... ', _mongo
-        # 해당 월에 필요한 정보 모두 가져오기
 
-        # Header 만들기...
-        #json 에서 값을 가져와서 Dict 로 담는다.
         _json = get_json_obj(file_path)
 
-        #가져온 DICT 자료에서 Header 만 가져온다.
         _header_define = _json['HEADER']
 
         write_line(_header_define, 'test.txt')
-
-        #넘어온 KEY list 를 돌리면서,
 
         for target_doc in target_list:
             if target_doc == '':
@@ -929,14 +792,13 @@ def make_vat_file(target_list, vat_key, company_code):
             if target_doc != 'V106':
                 write_line(_doc_define, 'test.txt')
 
-            #일반부가세 신고서 개별 라인 처리
             if target_doc == 'V101':
                 #def make_v101_1(flag_, type_, _define, _file_name, _uptae, _jonmok, _upjong, _amt):
                 _v101 = _mongo['V101']
                 make_v101_1(1, '01', _json['_V101_1'], 'test.txt', _v101.get('TAX_STD_BUS_NAME_1'), _v101.get('TAX_STD_BUS_ITEM_1'), _v101.get('TAX_STD_BUS_CODE_1'), _v101.get('TAX_STD_BUS_AMT_1'))
                 make_v101_1(0, '01', _json['_V101_1'], 'test.txt', _v101.get('TAX_STD_BUS_NAME_2'), _v101.get('TAX_STD_BUS_ITEM_2'), _v101.get('TAX_STD_BUS_CODE_2'), _v101.get('TAX_STD_BUS_AMT_2'))
                 make_v101_1(0, '01', _json['_V101_1'], 'test.txt', _v101.get('TAX_STD_BUS_NAME_3'), _v101.get('TAX_STD_BUS_ITEM_3'), _v101.get('TAX_STD_BUS_CODE_3'), _v101.get('TAX_STD_BUS_AMT_3'))
-                
+
                 make_v101_1(0, '02', _json['_V101_1'], 'test.txt', _v101.get('TAX_STD_BUS_NAME_4'), _v101.get('TAX_STD_BUS_ITEM_4'), _v101.get('TAX_STD_BUS_CODE_4'), _v101.get('TAX_STD_BUS_AMT_4'))
                 make_v101_1(0, '04', _json['_V101_1'], 'test.txt', _v101.get('TAX_STD_BUS_NAME_1'), _v101.get('TAX_STD_BUS_ITEM_1'), _v101.get('TAX_STD_BUS_CODE_1'), _v101.get('REDU_CREDIT_TAX'))
                 make_v101_1(0, '07', _json['_V101_1'], 'test.txt', _v101.get('TAX_STD_BUS_NAME_1'), _v101.get('TAX_STD_BUS_ITEM_1'), _v101.get('TAX_STD_BUS_CODE_1'), _v101.get('REDU_ETC_TAX'))
@@ -978,98 +840,74 @@ def make_vat_file(target_list, vat_key, company_code):
                 make_v101_3('B7300', _json['_V101_3'], 'test.txt', _v101.get('GS_PURCHSPECIAL_KONTO_AMT'), _v101.get('GS_PURCHSPECIAL_KONTO_TAX'))
                 make_v101_3('B7400', _json['_V101_3'], 'test.txt', _v101.get('GS_PURCHSPECIAL_DELYKONTO_AMT'), _v101.get('GS_PURCHSPECIAL_DELYKONTO_TAX'))
 
-            elif target_doc == 'V104':  # 매출/매입세금계산서 합계표
+            elif target_doc == 'V104':
 
                 #write_line(_json['V104'], 'test.txt')  # V104 Header
-                # 매출세금계산서 합계표
                 _v104_h = _mongo['V104']
 
-                # 매출세금계산서 계산서이외 매출목록
                 if int(_v104_h['NON_ELEC_TOT_SALES_CNT']) > 0:
                     _v104 = _v104_h['SUB']
-                    # 목록을 넘겨서 만들도록 한다.
                     make_v104_1(_json.get('_V104_1'), 'test.txt', _v104)
 
-                # 매출세금계산서 계산서이외 매출합계
                 make_one_record(_json.get('_V104_2'), 'test.txt')
                 make_one_record(_json.get('_V104_3'), 'test.txt')
-                #매입세금계산서 합계표
                 _v105_h = _mongo['V105']
 
-                # 매입세금계산서 계산서이외 매입목록
                 if int(_v105_h['NON_ELEC_TOT_PURCH_CNT']) > 0:
                     _v105 = _v105_h['SUB']
-                    # 목록을 넘겨서 만들도록 한다.
                     make_v105_1(_json.get('_V105_1'), 'test.txt', _v105)
 
-                # 매입세금계산서 계산서이외 매입합계
                 make_one_record(_json.get('_V105_2'), 'test.txt')
                 make_one_record(_json.get('_V105_3'), 'test.txt')
 
-            elif target_doc == 'V109':  # 매출/매입계산서 합계표
-                # 헤더 / 제출의무자 인적사항 레코드
+            elif target_doc == 'V109':
                 write_line(_json['_V109_1'], 'test.txt')
 
-                # 제출의부자별집계레코드(매출/전자계산서발급외)
                 make_one_record(_json.get('_V109_2'), 'test.txt')
 
-                # 매출세금계산서 합계표
                 _v109_h = _mongo['V104-1']
 
-                # 매출세금계산서 계산서이외 매출목록
                 if 'NON_ELEC_TOT_SALES_CNT' in _v109_h:
                     if int(_v109_h.get('NON_ELEC_TOT_SALES_CNT')) > 0:
                         _v109 = _v109_h['SUB']
-                        # 목록을 넘겨서 만들도록 한다.
                         make_v109_3(_json.get('_V109_3'), 'test.txt', _v109)
 
-                # 제출의부자별집계레코드(매출/전자계산서발급외)
                 make_one_record(_json.get('_V109_4'), 'test.txt')
 
-                # 매입....
-                # 제출의부자별집계레코드(매입/전자계산서발급외)
                 make_one_record(_json.get('_V110_2'), 'test.txt')
 
-                # 매입세금계산서 합계표
                 _v110_h = _mongo['V105-1']
 
-                # 매입세금계산서 계산서이외 매입목록
                 if int(_v110_h['ELEC_PSN_PURCH_CNT']) > 0:
                     _v110 = _v110_h['SUB']
-                    # 목록을 넘겨서 만들도록 한다.
                     make_v110_3(_json.get('_V110_3'), 'test.txt', _v110)
 
-                # 제출의부자별집계레코드(매입/전자계산서발급외)
                 make_one_record(_json.get('_V110_4'), 'test.txt')
-            elif target_doc == 'V106':  # 영세율첨부서류제출명세서
+            elif target_doc == 'V106':
 
                 _v106_h = _mongo['V106']
                 if 'TOT_INTRO_WON_AMT' in _v106_h:
                     if int(_v106_h.get('TOT_INTRO_WON_AMT')) > 0:
                         _v106 = _v106_h['SUB']
-                        # 목록을 넘겨서 만들도록 한다.
                         make_v106(_json.get('V106'), 'test.txt', _v106)
 
-            elif target_doc == 'V164':  # 신용카드매출전표등수령금액합계표
+            elif target_doc == 'V164':
                 _v164_h = _mongo['V164']
                 if 'GE_TOTAL_COUNT' in _v164_h:
                     if int(_v164_h.get('GE_TOTAL_COUNT')) > 0:
                         _v164 = _v164_h['SUB']
-                        # 목록을 넘겨서 만들도록 한다.
                         make_v164(_json.get('_V164_1'), 'test.txt', _v164)
 
-            elif target_doc == 'V174':  # 내국신용장.구매확인서
+            elif target_doc == 'V174':
                 _v174_h = _mongo['V174']
                 if 'TOT_COUNT' in _v174_h:
                     if int(_v174_h.get('TOT_COUNT')) > 0:
                         _v174 = _v174_h['SUB']
-                        # 목록을 넘겨서 만들도록 한다.
                         make_v174(_json.get('_V174_1'), 'test.txt', _v174)
             else:
-                print u'아무것도 없음.'
+                print 'xxxx'
 
 
-        #각각 파일 말기....
     except IndexError as e:
         print 'Index Error: ', str(e)
     except IOError as e:
@@ -1080,10 +918,7 @@ def make_vat_file(target_list, vat_key, company_code):
     return True
 
 
-# 메인 함수.
 if __name__ == "__main__":
-    # 파일신고 대상 목록 KEY 를 담은 LIST or DIC 같은 것들..에 담아서
-    # 넘길것.
     result = make_vat_file(['V101', 'V104', 'V105', 'V109', 'V110', 'V106', 'V141', 'V153', 'V177', 'V149', 'V174'], '201411', 'KIMEX')
     #result = make_vat_file(['V106'], '201411', 'KIMEX')
     sys.exit(result)

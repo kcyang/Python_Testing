@@ -41,7 +41,7 @@
             "value": "",
             "blank": "",
             "table": "BSE",
-            "field": "VATQT",
+            "field": "SINGO",
             "multi": "",
             "desc":"신고구분"
         },
@@ -59,13 +59,13 @@
             "value": "",
             "blank": "",
             "table": "BSE",
-            "field": "YEAR_GISU",
+            "field": "YEARGISU",
             "multi": "",
             "desc":"년도+기수"
         },
         "008": {
-            "length": "2",
-            "value": "01",
+            "length": "3",
+            "value": "",
             "blank": "",
             "table": "BSE",
             "field": "CHASU",
@@ -117,26 +117,148 @@
             "blank": " ",
             "field": "",
             "multi": ""
-        }
-    },
-    "V101" : {
-        "001": {
-            "length": "4",
-            "value": "V101",
-            "blank": "",
+        },
+        "015": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Company Name",
+            "multi": ""
+        },
+        "016": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Owner Name",
+            "multi": ""
+        },
+        "017": {
+            "length": "70",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Address",
+            "multi": ""
+        },
+        "018": {
+            "length": "14",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Phone No_",
+            "multi": ""
+        },
+        "019": {
+            "length": "70",
+            "value": "",
+            "blank": " ",
+            "table": "",
             "field": "",
             "multi": ""
         },
-        "002": {
-            "length": "13",
+        "020": {
+            "length": "14",
             "value": "",
-            "blank": "0",
-            "table": "V101",
-            "field": "PR_TAX_INV_GEN_AMT",
+            "blank": " ",
+            "table": "",
+            "field": "",
             "multi": ""
         },
-        "003": {
+        "021": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business Type",
+            "multi": ""
+        },
+        "022": {
+            "length": "50",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business Class",
+            "multi": ""
+        },
+        "023": {
+            "length": "7",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Bussiness Code",
+            "multi": ""
+        },
+        "024": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATFROM",
+            "multi": "",
+            "desc" : "신고대상기간FROM"
+        },
+        "025": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATTO",
+            "multi": "",
+            "desc" : "신고대상기간TO"
+        },
+        "026": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "REPORTDATE",
+            "multi": "",
+            "desc" : "신고Date"
+        },
+        "027": {
+            "length": "1",
+            "value": "N",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "028": {
+            "length": "14",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Sup empmobile",
+            "multi": ""
+        },
+        "029": {
+            "length": "4",
+            "value": "9000",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "030": {
             "length": "13",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "031": {
+            "length": "50",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Sup empemail",
+            "multi": ""
+        },
+        "032": {
+            "length": "65",
             "value": "",
             "blank": " ",
             "table": "",
@@ -144,21 +266,3878 @@
             "multi": ""
         }
     },
-    "V104" : {
+    "V101" : {
         "001": {
-            "length": "4",
-            "value": "V104",
+            "length": "2",
+            "value": "17",
             "blank": "",
             "field": "",
             "multi": ""
         },
         "002": {
+            "length": "7",
+            "value": "I103200",
+            "blank": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_TAX_INVOICED_AMT",
+            "multi": ""
+        },
+        "004": {
             "length": "13",
             "value": "",
             "blank": "0",
-            "table": "V104",
-            "field": "ELEC_BUS_SALES_TAX_AMT",
+            "table": "V101",
+            "field": "GS_TAX_INVOICED_TAX",
+            "multi": ""
+        },
+        "005": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_VEND_TAX_INV_AMT",
+            "multi": ""
+        },
+        "006": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_VEND_TAX_INV_TAX",
+            "multi": ""
+        },
+        "007": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_CR_CASH_AMT",
+            "multi": ""
+        },
+        "008": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_CR_CASH_TAX",
+            "multi": ""
+        },
+        "009": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_ETC_AMT",
+            "multi": ""
+        },
+        "010": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_ETC_TAX",
+            "multi": ""
+        },
+        "011": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_ZR_TAX_INV_AMT",
+            "multi": ""
+        },
+        "012": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_ZR_ETC_AMT",
+            "multi": ""
+        },
+        "013": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_PREARG_SIN_AMT",
+            "multi": ""
+        },
+        "014": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_PREARG_SIN_TAX",
+            "multi": ""
+        },
+        "015": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_SALES_GS_TAX_AMT",
+            "multi": ""
+        },
+        "016": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_SALES_GS_TAX_TAX",
+            "multi": ""
+        },
+        "017": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_SALES_GS_ETC_AMT",
+            "multi": ""
+        },
+        "018": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_SALES_GS_ETC_TAX",
+            "multi": ""
+        },
+        "019": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_SALES_ZR_AMT",
+            "multi": ""
+        },
+        "020": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_SALES_ZR_ECT_AMT",
+            "multi": ""
+        },
+        "021": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_SALES_ZR_TOT_AMT",
+            "multi": ""
+        },
+        "022": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_SALES_ZR_TOT_TAX",
+            "multi": ""
+        },
+        "023": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_BADDEPT_TAX",
+            "multi": ""
+        },
+        "024": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_STD_AMT",
+            "multi": ""
+        },
+        "025": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "GS_STD_TAX",
+            "multi": ""
+        },
+        "026": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_INV_GEN_AMT",
+            "multi": ""
+        },
+        "027": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_INV_GEN_TAX",
+            "multi": ""
+        },
+        "028": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_INV_FIXED_AMT",
+            "multi": ""
+        },
+        "029": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_INV_FIXED_TAX",
+            "multi": ""
+        },
+        "030": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_INV_MIN_AMT",
+            "multi": ""
+        },
+        "031": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_INV_MIN_TAX",
+            "multi": ""
+        },
+        "032": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_PURCH_TAX_AMT",
+            "multi": ""
+        },
+        "033": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_PURCH_TAX_TAX",
+            "multi": ""
+        },
+        "034": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_PURCH_ETC_AMT",
+            "multi": ""
+        },
+        "035": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_PURCH_ETC_TAX",
+            "multi": ""
+        },
+        "036": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_PURCH_TOT_AMT",
+            "multi": ""
+        },
+        "037": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADSINGO_PURCH_TOT_TAX",
+            "multi": ""
+        },
+        "038": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_INVOICED_AMT",
+            "multi": ""
+        },
+        "039": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_INVOICED_TAX",
+            "multi": ""
+        },
+        "040": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_ETC_AMT",
+            "multi": ""
+        },
+        "041": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_ETC_TAX",
+            "multi": ""
+        },
+        "042": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "ETCGONJE_TOTAL_AMT",
+            "multi": ""
+        },
+        "043": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "ETCGONJE_TOTAL_TAX",
+            "multi": ""
+        },
+        "044": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_TOT_AMT",
+            "multi": ""
+        },
+        "045": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_TOT_TAX",
+            "multi": ""
+        },
+        "046": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_BADGONJE_TOT_AMT",
+            "multi": ""
+        },
+        "047": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_BADGONJE_TOT_TAX",
+            "multi": ""
+        },
+        "048": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADGONJE_BAD_AMT",
+            "multi": ""
+        },
+        "049": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADGONJE_BAD_TAX",
+            "multi": ""
+        },
+        "050": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADGONJE_GEN_NOTAX_AMT",
+            "multi": ""
+        },
+        "051": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADGONJE_GEN_NOTAX_TAX",
+            "multi": ""
+        },
+        "052": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADGONJE_DAESON_AMT",
+            "multi": ""
+        },
+        "053": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADGONJE_DAESON_TAX",
+            "multi": ""
+        },
+        "054": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADGONJE_TOTAL_AMT",
+            "multi": ""
+        },
+        "055": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "BADGONJE_TOTAL_TAX",
+            "multi": ""
+        },
+        "056": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_CALC_AMT",
+            "multi": ""
+        },
+        "057": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "PR_TAX_CALC_TAX",
+            "multi": ""
+        },
+        "058": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "NAPBU_TAX",
+            "multi": ""
+        },
+        "059": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "REDU_ETC_TAX",
+            "multi": ""
+        },
+        "060": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "ETCKG_TOTAL_TAX",
+            "multi": ""
+        },
+        "061": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "REDU_TOT_TAX",
+            "multi": ""
+        },
+        "062": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "REFUND_TAX",
+            "multi": ""
+        },
+        "063": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "NOTICED_TAX",
+            "multi": ""
+        },
+        "064": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "REPORTED_DAE_TAXED_TAX",
+            "multi": ""
+        },
+        "065": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "REPORTED_SPE_TAXED_TAX",
+            "multi": ""
+        },
+        "066": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "ADD_TAX_TOT_TAX",
+            "multi": ""
+        },
+        "067": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "RED_ADD_NAPBU_TAX",
+            "multi": ""
+        },
+        "068": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "TAX_STD_BUS_AMT_4",
+            "multi": ""
+        },
+        "069": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "TAX_STD_BUS_AMT_5",
+            "multi": ""
+        },
+        "070": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "TAXFREE_BUS_AMT_3",
+            "multi": ""
+        },
+        "071": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "TAXFREE_BUS_TOTAL_AMT",
+            "multi": ""
+        },
+        "072": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "INVOICE_GYOBU_AMT",
+            "multi": ""
+        },
+        "073": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "INVOICE_SUCHI_AMT",
+            "multi": ""
+        },
+        "074": {
+            "length": "15",
+            "value": "",
+            "blank": " ",
+            "table": "V101",
+            "field": "VATGUBUN",
+            "multi": ""
+        },
+        "075": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "V101",
+            "field": "BANK_CODE",
+            "multi": ""
+        },
+        "076": {
+            "length": "20",
+            "value": "",
+            "blank": " ",
+            "table": "V101",
+            "field": "BANK_KONTO",
+            "multi": ""
+        },
+        "077": {
+            "length": "9",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "078": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "V101",
+            "field": "BANK_SUBSI",
+            "multi": ""
+        },
+        "079": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "V101",
+            "field": "CLOSE_DATE",
+            "multi": ""
+        },
+        "080": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "081": {
+            "length": "1",
+            "value": "N",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "정기신고/N"
+        },
+        "082": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V101",
+            "field": "RED_ADD_NAPBU_TAX",
+            "multi": ""
+        },
+        "083": {
+            "length": "1",
+            "value": "5",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "일반과세자구분"
+        },
+        "084": {
+            "length": "1",
+            "value": "1",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "조기환급취소구분"
+        },
+        "085": {
+            "length": "43",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
             "multi": ""
         }
+    },
+    "_V101_1" : {
+        "001": {
+            "length": "2",
+            "value": "15",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "7",
+            "value": "I103200",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "2",
+            "value": "",
+            "blank": " ",
+            "table": "_V101_1",
+            "field": "DOCTYPE",
+            "multi": ""
+        },
+        "004": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "_V101_1",
+            "field": "UPTAE",
+            "multi": ""
+        },
+        "005": {
+            "length": "50",
+            "value": "",
+            "blank": " ",
+            "table": "_V101_1",
+            "field": "JONGMOK",
+            "multi": ""
+        },
+        "006": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V101_1",
+            "field": "UPJONG",
+            "multi": ""
+        },
+        "007": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V101_1",
+            "field": "AMT",
+            "multi": ""
+        },
+        "008": {
+            "length": "37",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V101_2" : {
+        "001": {
+            "length": "2",
+            "value": "14",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "7",
+            "value": "I103200",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "_V101_2",
+            "field": "DOCTYPE",
+            "multi": ""
+        },
+        "004": {
+            "length": "12",
+            "value": "",
+            "blank": "1",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "005": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V101_2",
+            "field": "AMT",
+            "multi": ""
+        },
+        "006": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V101_2",
+            "field": "TAX",
+            "multi": ""
+        },
+        "007": {
+            "length": "46",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V101_3" : {
+        "001": {
+            "length": "2",
+            "value": "13",
+            "blank": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "7",
+            "value": "I103200",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "_V101_3",
+            "field": "DOCTYPE",
+            "multi": ""
+        },
+        "004": {
+            "length": "12",
+            "value": "",
+            "blank": "1",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "005": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V101_3",
+            "field": "AMT",
+            "multi": ""
+        },
+        "006": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V101_3",
+            "field": "TAX",
+            "multi": ""
+        },
+        "007": {
+            "length": "39",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "V104": {
+        "001": {
+            "length": "1",
+            "value": "7",
+            "blank": "",
+            "field": "",
+            "multi": "",
+            "desc" : "매출/매입 세금계산서HEADER"
+        },
+        "002": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": "",
+            "desc" : "사업자등록번호"
+        },
+        "003": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Company Name",
+            "multi": ""
+        },
+        "004": {
+            "length": "15",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Owner Name",
+            "multi": ""
+        },
+        "005": {
+            "length": "45",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Address",
+            "multi": ""
+        },
+        "006": {
+            "length": "17",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "007": {
+            "length": "25",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "008": {
+            "length": "6",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "SFROM",
+            "multi": ""
+        },
+        "009": {
+            "length": "6",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "STO",
+            "multi": ""
+        },
+        "010": {
+            "length": "6",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "REPORTSDATE",
+            "multi": ""
+        },
+        "011": {
+            "length": "9",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V104_1": {
+        "001": {
+            "length": "1",
+            "value": "1",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "매출세금계산서이외분매출자료"
+        },
+        "002": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": "",
+            "desc" : "사업자등록번호"
+        },
+        "003": {
+            "length": "4",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_1",
+            "field": "NON_ELEC_NO",
+            "multi": "",
+            "desc" : "일련번호"
+        },
+        "004": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "_V104_1",
+            "field": "NON_ELEC_BUS_NO",
+            "multi": ""
+        },
+        "005": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "_V104_1",
+            "field": "NON_ELEC_BUS_NAME",
+            "multi": ""
+        },
+        "006": {
+            "length": "17",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "007": {
+            "length": "25",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "008": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_1",
+            "field": "NON_ELEC_QTY",
+            "multi": ""
+        },
+        "009": {
+            "length": "2",
+            "value": "00",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "010": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_1",
+            "field": "NON_ELEC_ACT_AMT",
+            "multi": ""
+        },
+        "011": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_1",
+            "field": "NON_ELEC_TAX_AMT",
+            "multi": ""
+        },
+        "012": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "013": {
+            "length": "1",
+            "value": " ",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "014": {
+            "length": "4",
+            "value": "7501",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "015": {
+            "length": "3",
+            "value": "",
+            "blank": "",
+            "table": "company",
+            "field": "BSE_Tax Office Code",
+            "multi": ""
+        },
+        "016": {
+            "length": "28",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V104_2": {
+        "001": {
+            "length": "1",
+            "value": "3",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "매출세금계산서이외분매출합계"
+        },
+        "002": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": "",
+            "desc" : "사업자등록번호"
+        },
+        "003": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_TOT_SALES_CNT",
+            "multi": ""
+        },
+        "004": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_TOT_SALES_QTY",
+            "multi": ""
+        },
+        "005": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_TOT_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "006": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_TOT_SALES_TAX_AMT",
+            "multi": ""
+        },
+        "007": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_BUS_SALES_CNT",
+            "multi": ""
+        },
+        "008": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_BUS_SALES_QTY",
+            "multi": ""
+        },
+        "009": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_BUS_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "010": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_BUS_SALES_TAX_AMT",
+            "multi": ""
+        },
+
+        "011": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_PSN_SALES_CNT",
+            "multi": ""
+        },
+        "012": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_PSN_SALES_QTY",
+            "multi": ""
+        },
+        "013": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_PSN_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "014": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_2",
+            "field": "NON_ELEC_PSN_SALES_TAX_AMT",
+            "multi": ""
+        },
+        "015": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V104_3": {
+        "001": {
+            "length": "1",
+            "value": "5",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "매출세금계산서 분 매출합계"
+        },
+        "002": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": "",
+            "desc" : "사업자등록번호"
+        },
+        "003": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_TOT_SALES_CNT",
+            "multi": ""
+        },
+        "004": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_TOT_SALES_QTY",
+            "multi": ""
+        },
+        "005": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_TOT_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "006": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_TOT_SALES_TAX_AMT",
+            "multi": ""
+        },
+        "007": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_BUS_SALES_CNT",
+            "multi": ""
+        },
+        "008": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_BUS_SALES_QTY",
+            "multi": ""
+        },
+        "009": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_BUS_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "010": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_BUS_SALES_TAX_AMT",
+            "multi": ""
+        },
+
+        "011": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_PSN_SALES_CNT",
+            "multi": ""
+        },
+        "012": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_PSN_SALES_QTY",
+            "multi": ""
+        },
+        "013": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_PSN_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "014": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V104_3",
+            "field": "ELEC_PSN_SALES_TAX_AMT",
+            "multi": ""
+        },
+        "015": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+
+    "_V105_1": {
+        "001": {
+            "length": "1",
+            "value": "2",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "매입세금계산서이외분매출자료"
+        },
+        "002": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": "",
+            "desc" : "사업자등록번호"
+        },
+        "003": {
+            "length": "4",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_1",
+            "field": "NON_ELEC_NO",
+            "multi": "",
+            "desc" : "일련번호"
+        },
+        "004": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "_V105_1",
+            "field": "NON_ELEC_BUS_NO",
+            "multi": ""
+        },
+        "005": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "_V105_1",
+            "field": "NON_ELEC_BUS_NAME",
+            "multi": ""
+        },
+        "006": {
+            "length": "17",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "007": {
+            "length": "25",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "008": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_1",
+            "field": "NON_ELEC_QTY",
+            "multi": ""
+        },
+        "009": {
+            "length": "2",
+            "value": "00",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "010": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_1",
+            "field": "NON_ELEC_ACT_AMT",
+            "multi": ""
+        },
+        "011": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_1",
+            "field": "NON_ELEC_TAX_AMT",
+            "multi": ""
+        },
+        "012": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "013": {
+            "length": "1",
+            "value": " ",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "014": {
+            "length": "4",
+            "value": "8501",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "015": {
+            "length": "3",
+            "value": "",
+            "blank": "",
+            "table": "company",
+            "field": "BSE_Tax Office Code",
+            "multi": ""
+        },
+        "016": {
+            "length": "28",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V105_2": {
+        "001": {
+            "length": "1",
+            "value": "4",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "매입세금계산서이외분매입합계"
+        },
+        "002": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": "",
+            "desc" : "사업자등록번호"
+        },
+        "003": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_TOT_PURCH_CNT",
+            "multi": ""
+        },
+        "004": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_TOT_PURCH_QTY",
+            "multi": ""
+        },
+        "005": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_TOT_PURCH_ACT_AMT",
+            "multi": ""
+        },
+        "006": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_TOT_PURCH_TAX_AMT",
+            "multi": ""
+        },
+        "007": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_BUS_PURCH_CNT",
+            "multi": ""
+        },
+        "008": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_BUS_PURCH_QTY",
+            "multi": ""
+        },
+        "009": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_BUS_PURCH_ACT_AMT",
+            "multi": ""
+        },
+        "010": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_BUS_PURCH_TAX_AMT",
+            "multi": ""
+        },
+
+        "011": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_PSN_PURCH_CNT",
+            "multi": ""
+        },
+        "012": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_PSN_PURCH_QTY",
+            "multi": ""
+        },
+        "013": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_PSN_PURCH_ACT_AMT",
+            "multi": ""
+        },
+        "014": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_2",
+            "field": "NON_ELEC_PSN_PURCH_TAX_AMT",
+            "multi": ""
+        },
+        "015": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V105_3": {
+        "001": {
+            "length": "1",
+            "value": "6",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "매입세금계산서 분 매입합계"
+        },
+        "002": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": "",
+            "desc" : "사업자등록번호"
+        },
+        "003": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_TOT_PURCH_CNT",
+            "multi": ""
+        },
+        "004": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_TOT_PURCH_QTY",
+            "multi": ""
+        },
+        "005": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_TOT_PURCH_ACT_AMT",
+            "multi": ""
+        },
+        "006": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_TOT_PURCH_TAX_AMT",
+            "multi": ""
+        },
+        "007": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_BUS_PURCH_CNT",
+            "multi": ""
+        },
+        "008": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_BUS_PURCH_QTY",
+            "multi": ""
+        },
+        "009": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_BUS_PURCH_ACT_AMT",
+            "multi": ""
+        },
+        "010": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_BUS_PURCH_TAX_AMT",
+            "multi": ""
+        },
+
+        "011": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_PSN_PURCH_CNT",
+            "multi": ""
+        },
+        "012": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_PSN_PURCH_QTY",
+            "multi": ""
+        },
+        "013": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_PSN_PURCH_ACT_AMT",
+            "multi": ""
+        },
+        "014": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V105_3",
+            "field": "ELEC_PSN_PURCH_TAX_AMT",
+            "multi": ""
+        },
+        "015": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "V109":{
+        "001": {
+            "length": "1",
+            "value": "A",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Tax Office Code",
+            "multi": ""
+        },
+        "003": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "REPORTDATE",
+            "multi": ""
+        },
+        "004": {
+            "length": "1",
+            "value": "2",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "005": {
+            "length": "6",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "006": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": "",
+            "desc" : "사업자등록번호"
+        },
+        "007": {
+            "length": "40",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Company Name",
+            "multi": ""
+        },
+        "008": {
+            "length": "13",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Corporation No_",
+            "multi": ""
+        },
+        "009": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Owner Name",
+            "multi": ""
+        },
+        "010": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Post code",
+            "multi": ""
+        },
+        "011": {
+            "length": "70",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Address",
+            "multi": ""
+        },
+        "012": {
+            "length": "15",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Phone No_",
+            "multi": ""
+        },
+        "013": {
+            "length": "5",
+            "value": "00001",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "014": {
+            "length": "3",
+            "value": "101",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "015": {
+            "length": "15",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V109_1": {
+        "001": {
+            "length": "1",
+            "value": "B",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Tax Office Code",
+            "multi": ""
+        },
+        "003": {
+            "length": "6",
+            "value": "000001",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "004": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": "",
+            "desc" : "사업자등록번호"
+        },
+        "005": {
+            "length": "40",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Company Name",
+            "multi": ""
+        },
+        "006": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Owner Name",
+            "multi": ""
+        },
+        "007": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Post code",
+            "multi": ""
+        },
+        "008": {
+            "length": "70",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Address",
+            "multi": ""
+        },
+        "009": {
+            "length": "60",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V109_2": {
+        "001": {
+            "length": "1",
+            "value": "C",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "매출계산서_제출의무자별집계레코드"
+        },
+        "002": {
+            "length": "2",
+            "value": "17",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_GISU",
+            "multi": ""
+        },
+        "004": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_SINGO",
+            "multi": ""
+        },
+        "005": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Tax Office Code",
+            "multi": ""
+        },
+        "006": {
+            "length": "6",
+            "value": "00001",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "007": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": ""
+        },
+        "008": {
+            "length": "4",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "YEAR",
+            "multi": ""
+        },
+        "009": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATFROM",
+            "multi": ""
+        },
+        "010": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATTO",
+            "multi": ""
+        },
+        "011": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "REPORTDATE",
+            "multi": ""
+        },
+        "012": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_2",
+            "field": "NON_ELEC_TOT_SALES_CNT",
+            "multi": ""
+        },
+        "013": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_2",
+            "field": "NON_ELEC_TOT_SALES_QTY",
+            "multi": ""
+        },
+        "014": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "양수0/음수1"
+        },
+        "015": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_2",
+            "field": "NON_ELEC_TOT_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "016": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_2",
+            "field": "NON_ELEC_BUS_SALES_CNT",
+            "multi": ""
+        },
+        "017": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_2",
+            "field": "NON_ELEC_BUS_SALES_QTY",
+            "multi": ""
+        },
+        "018": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "양수0/음수1"
+        },
+        "019": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_2",
+            "field": "NON_ELEC_BUS_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "020": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_2",
+            "field": "NON_ELEC_PSN_SALES_CNT",
+            "multi": ""
+        },
+        "021": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_2",
+            "field": "NON_ELEC_PSN_SALES_QTY",
+            "multi": ""
+        },
+        "022": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "양수0/음수1"
+        },
+        "023": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_2",
+            "field": "NON_ELEC_PSN_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "024": {
+            "length": "97",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V109_3": {
+        "001": {
+            "length": "1",
+            "value": "D",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "2",
+            "value": "17",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_GISU",
+            "multi": ""
+        },
+        "004": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_SINGO",
+            "multi": ""
+        },
+        "005": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Tax Office Code",
+            "multi": ""
+        },
+        "006": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_3",
+            "field": "NON_ELEC_NO",
+            "multi": ""
+        },
+        "007": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": ""
+        },
+        "008": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "_V109_3",
+            "field": "NON_ELEC_BUS_NO",
+            "multi": ""
+        },
+        "009": {
+            "length": "40",
+            "value": "",
+            "blank": " ",
+            "table": "_V109_3",
+            "field": "NON_ELEC_BUS_NAME",
+            "multi": ""
+        },
+        "010": {
+            "length": "5",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_3",
+            "field": "NON_ELEC_QTY",
+            "multi": ""
+        },
+        "011": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "양수0/음수1"
+        },
+        "012": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_3",
+            "field": "NON_ELEC_ACT_AMT",
+            "multi": ""
+        },
+        "013": {
+            "length": "136",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V109_4": {
+        "001": {
+            "length": "1",
+            "value": "E",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "매출계산서_전자발급분집계레코드"
+        },
+        "002": {
+            "length": "2",
+            "value": "17",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_GISU",
+            "multi": ""
+        },
+        "004": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_SINGO",
+            "multi": ""
+        },
+        "005": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Tax Office Code",
+            "multi": ""
+        },
+        "006": {
+            "length": "6",
+            "value": "00001",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "007": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": ""
+        },
+        "008": {
+            "length": "4",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "YEAR",
+            "multi": ""
+        },
+        "009": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATFROM",
+            "multi": ""
+        },
+        "010": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATTO",
+            "multi": ""
+        },
+        "011": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "REPORTDATE",
+            "multi": ""
+        },
+        "012": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_4",
+            "field": "ELEC_TOT_SALES_CNT",
+            "multi": ""
+        },
+        "013": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_4",
+            "field": "ELEC_TOT_SALES_QTY",
+            "multi": ""
+        },
+        "014": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "양수0/음수1"
+        },
+        "015": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_4",
+            "field": "ELEC_TOT_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "016": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_4",
+            "field": "ELEC_BUS_SALES_CNT",
+            "multi": ""
+        },
+        "017": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_4",
+            "field": "ELEC_BUS_SALES_QTY",
+            "multi": ""
+        },
+        "018": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "양수0/음수1"
+        },
+        "019": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_4",
+            "field": "ELEC_BUS_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "020": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_4",
+            "field": "ELEC_PSN_SALES_CNT",
+            "multi": ""
+        },
+        "021": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_4",
+            "field": "ELEC_PSN_SALES_QTY",
+            "multi": ""
+        },
+        "022": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "양수0/음수1"
+        },
+        "023": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V109_4",
+            "field": "ELEC_PSN_SALES_ACT_AMT",
+            "multi": ""
+        },
+        "024": {
+            "length": "97",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V110_2": {
+        "001": {
+            "length": "1",
+            "value": "C",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "매입계산서_제출의무자별집계레코드"
+        },
+        "002": {
+            "length": "2",
+            "value": "18",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_GISU",
+            "multi": ""
+        },
+        "004": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_SINGO",
+            "multi": ""
+        },
+        "005": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Tax Office Code",
+            "multi": ""
+        },
+        "006": {
+            "length": "6",
+            "value": "00001",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "007": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": ""
+        },
+        "008": {
+            "length": "4",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "YEAR",
+            "multi": ""
+        },
+        "009": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATFROM",
+            "multi": ""
+        },
+        "010": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATTO",
+            "multi": ""
+        },
+        "011": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "REPORTDATE",
+            "multi": ""
+        },
+        "012": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V110_2",
+            "field": "ELEC_PSN_PURCH_CNT",
+            "multi": ""
+        },
+        "013": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V110_2",
+            "field": "ELEC_PSN_PURCH_QTY",
+            "multi": ""
+        },
+        "014": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "양수0/음수1"
+        },
+        "015": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V110_2",
+            "field": "ELEC_PSN_PURCH_ACT_AMT",
+            "multi": ""
+        },
+        "016": {
+            "length": "151",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V110_3": {
+        "001": {
+            "length": "1",
+            "value": "D",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "2",
+            "value": "18",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_GISU",
+            "multi": ""
+        },
+        "004": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_SINGO",
+            "multi": ""
+        },
+        "005": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Tax Office Code",
+            "multi": ""
+        },
+        "006": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V110_3",
+            "field": "NON_ELEC_NO",
+            "multi": ""
+        },
+        "007": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": ""
+        },
+        "008": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "_V110_3",
+            "field": "NON_ELEC_BUS_NO",
+            "multi": ""
+        },
+        "009": {
+            "length": "40",
+            "value": "",
+            "blank": " ",
+            "table": "_V110_3",
+            "field": "NON_ELEC_BUS_NAME",
+            "multi": ""
+        },
+        "010": {
+            "length": "5",
+            "value": "",
+            "blank": "0",
+            "table": "_V110_3",
+            "field": "NON_ELEC_QTY",
+            "multi": ""
+        },
+        "011": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "양수0/음수1"
+        },
+        "012": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V110_3",
+            "field": "NON_ELEC_ACT_AMT",
+            "multi": ""
+        },
+        "013": {
+            "length": "136",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V110_4": {
+        "001": {
+            "length": "1",
+            "value": "E",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "매입계산서_제출의무자별집계레코드"
+        },
+        "002": {
+            "length": "2",
+            "value": "18",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_GISU",
+            "multi": ""
+        },
+        "004": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V109_SINGO",
+            "multi": ""
+        },
+        "005": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Tax Office Code",
+            "multi": ""
+        },
+        "006": {
+            "length": "6",
+            "value": "00001",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "007": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": ""
+        },
+        "008": {
+            "length": "4",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "YEAR",
+            "multi": ""
+        },
+        "009": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATFROM",
+            "multi": ""
+        },
+        "010": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATTO",
+            "multi": ""
+        },
+        "011": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "REPORTDATE",
+            "multi": ""
+        },
+        "012": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V110_4",
+            "field": "ELEC_BUS_PURCH_CNT",
+            "multi": ""
+        },
+        "013": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V110_4",
+            "field": "ELEC_BUS_PURCH_QTY",
+            "multi": ""
+        },
+        "014": {
+            "length": "1",
+            "value": "0",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "양수0/음수1"
+        },
+        "015": {
+            "length": "14",
+            "value": "",
+            "blank": "0",
+            "table": "_V110_4",
+            "field": "ELEC_BUS_PURCH_ACT_AMT",
+            "multi": ""
+        },
+        "016": {
+            "length": "151",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+
+    "V106":{
+        "001": {
+            "length": "2",
+            "value": "17",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "7",
+            "value": "I105800",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "2",
+            "value": "01",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "01-개별소비세신고증빙서류제출"
+        },
+        "004": {
+            "length": "60",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": "",
+            "desc" : "제출사유-일단공백"
+        },
+        "005": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "V106",
+            "field": "DOC_SEQ",
+            "multi": ""
+        },
+        "006": {
+            "length": "40",
+            "value": "",
+            "blank": " ",
+            "table": "V106",
+            "field": "DOC_NAME",
+            "multi": ""
+        },
+        "007": {
+            "length": "20",
+            "value": "",
+            "blank": " ",
+            "table": "V106",
+            "field": "ISSUE_MAN",
+            "multi": ""
+        },
+        "008": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "V106",
+            "field": "ISSUE_DATE",
+            "multi": ""
+        },
+        "009": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "V106",
+            "field": "SHIP_DATE",
+            "multi": ""
+        },
+        "010": {
+            "length": "3",
+            "value": "",
+            "blank": " ",
+            "table": "V106",
+            "field": "CURRENCY CODE",
+            "multi": ""
+        },
+        "011": {
+            "length": "9",
+            "value": "",
+            "blank": "0",
+            "table": "V106",
+            "field": "EXCHANGE RATE",
+            "multi": "Y",
+            "dpoint" : "4",
+            "desc" : "소수점처리필요"
+        },
+        "012": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V106",
+            "field": "THIS_INTRO_FOR_AMT",
+            "multi": "Y",
+            "dpoint" : "2",
+            "desc" : "소수점처리필요"
+        },
+        "013": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V106",
+            "field": "THIS_INTRO_WON_AMT",
+            "multi": ""
+        },
+        "014": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V106",
+            "field": "THIS_SINGO_FOR_AMT",
+            "multi": "Y",
+            "dpoint" : "2",
+            "desc" : "소수점처리필요"
+        },
+        "015": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V106",
+            "field": "THIS_SINGO_WON_AMT",
+            "multi": ""
+        },
+        "016": {
+            "length": "25",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "V141":{
+        "001": {
+            "length": "1",
+            "value": "A",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "6",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "V141YEARMAN",
+            "multi": ""
+        },
+        "003": {
+            "length": "1",
+            "value": "",
+            "blank": " ",
+            "table": "V141",
+            "field": "EXPORT_FLAG",
+            "multi": ""
+        },
+        "004": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": ""
+        },
+        "005": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Company Name",
+            "multi": ""
+        },
+        "006": {
+            "length": "15",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Owner Name",
+            "multi": ""
+        },
+        "007": {
+            "length": "45",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Address",
+            "multi": ""
+        },
+        "008": {
+            "length": "17",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business Type",
+            "multi": ""
+        },
+        "009": {
+            "length": "25",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business Class",
+            "multi": ""
+        },
+        "010": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATFROM",
+            "multi": "",
+            "desc" : "신고대상기간FROM"
+        },
+        "011": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "VATTO",
+            "multi": "",
+            "desc": "신고대상기간TO"
+        },
+        "012": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "REPORTDATE",
+            "multi": "",
+            "desc" : "신고Date"
+        },
+        "013": {
+            "length": "6",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "V153":{
+        "001": {
+            "length": "2",
+            "value": "17",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "7",
+            "value": "I103300",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "11",
+            "value": "",
+            "blank": "0",
+            "table": "V153",
+            "field": "PURCH_TAX_TOTAL_CNT",
+            "multi": ""
+        },
+        "004": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V153",
+            "field": "PURCH_TAX_TOTAL_AMT",
+            "multi": ""
+        },
+        "005": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V153",
+            "field": "PURCH_TAX_TOTAL_TAX",
+            "multi": ""
+        },
+        "006": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V153",
+            "field": "PURCH_AN_TOTAL_ACT",
+            "multi": ""
+        },
+        "007": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V153",
+            "field": "PURCH_AN_TOTAL_TAX",
+            "multi": ""
+        },
+        "008": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V153",
+            "field": "PURCH_AN_TOTAL_BULTAX",
+            "multi": ""
+        },
+        "009": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V153",
+            "field": "PURCH_COM_TOTAL_BULTOT",
+            "multi": ""
+        },
+        "010": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V153",
+            "field": "PURCH_COM_TOTAL_BULTAX",
+            "multi": ""
+        },
+        "011": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V153",
+            "field": "PURCH_COM_TOTAL_GONTAX",
+            "multi": ""
+        },
+        "012": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V153",
+            "field": "PURCH_GON_TOTAL_TAX",
+            "multi": ""
+        },
+        "013": {
+            "length": "45",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+
+    },
+    "V164":{
+        "001": {
+            "length": "2",
+            "value": "HL",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "4",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "YEAR",
+            "multi": ""
+        },
+        "003": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V164_GISU",
+            "multi": ""
+        },
+        "004": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V164_SINGO",
+            "multi": ""
+        },
+        "005": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": ""
+        },
+        "006": {
+            "length": "60",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Company Name",
+            "multi": ""
+        },
+        "007": {
+            "length": "30",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Owner Name",
+            "multi": ""
+        },
+        "008": {
+            "length": "13",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Corporation No_",
+            "multi": ""
+        },
+        "009": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "BSE",
+            "field": "REPORTDATE",
+            "multi": ""
+        },
+        "010": {
+            "length": "11",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "_V164_1":{
+        "001": {
+            "length": "2",
+            "value": "DL",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "4",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "YEAR",
+            "multi": ""
+        },
+        "003": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V164_GISU",
+            "multi": ""
+        },
+        "004": {
+            "length": "1",
+            "value": "",
+            "blank": "",
+            "table": "BSE",
+            "field": "V164_SINGO",
+            "multi": ""
+        },
+        "005": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "company",
+            "field": "BSE_Business No_",
+            "multi": ""
+        },
+        "006": {
+            "length": "1",
+            "value": "1",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "007": {
+            "length": "20",
+            "value": "",
+            "blank": " ",
+            "table": "_V164_1",
+            "field": "CARD_NUMBER",
+            "multi": ""
+        },
+        "008": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "_V164_1",
+            "field": "BUSINESS_NO",
+            "multi": ""
+        },
+        "009": {
+            "length": "9",
+            "value": "",
+            "blank": "0",
+            "table": "_V164_1",
+            "field": "CNT",
+            "multi": ""
+        },
+        "010": {
+            "length": "1",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "011": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "_V164_1",
+            "field": "SUPPLY_AMOUNT",
+            "multi": ""
+        },
+        "012": {
+            "length": "1",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "013": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "_V164_1",
+            "field": "TAX_AMOUNT",
+            "multi": ""
+        },
+        "014": {
+            "length": "54",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+    },
+    "V177":{
+        "001": {
+            "length": "2",
+            "value": "17",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "7",
+            "value": "I104000",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "a_a",
+            "multi": ""
+        },
+        "004": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "a_b",
+            "multi": ""
+        },
+        "005": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "a_c",
+            "multi": ""
+        },
+        "006": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "a_d",
+            "multi": ""
+        },
+        "007": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "a_e",
+            "multi": ""
+        },
+        "008": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "b_a",
+            "multi": ""
+        },
+        "009": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "c_a",
+            "multi": ""
+        },
+        "010": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "c_b",
+            "multi": ""
+        },
+        "011": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "d_a",
+            "multi": ""
+        },
+        "012": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "d_b",
+            "multi": ""
+        },
+        "013": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "d_c",
+            "multi": ""
+        },
+        "014": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "d_d",
+            "multi": ""
+        },
+        "015": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "d_e",
+            "multi": ""
+        },
+        "016": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "d_f",
+            "multi": ""
+        },
+        "017": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "d_g",
+            "multi": ""
+        },
+        "018": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "d_h",
+            "multi": ""
+        },
+        "019": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "e_a",
+            "multi": ""
+        },
+        "020": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "f_a",
+            "multi": ""
+        },
+        "021": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "f_b",
+            "multi": ""
+        },
+        "022": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "f_c",
+            "multi": ""
+        },
+        "023": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "f_d",
+            "multi": ""
+        },
+        "024": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "f_e",
+            "multi": ""
+        },
+        "025": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "f_f",
+            "multi": ""
+        },
+        "026": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "f_g",
+            "multi": ""
+        },
+        "027": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "g_a",
+            "multi": ""
+        },
+        "028": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V177",
+            "field": "h_a",
+            "multi": ""
+        },
+        "029": {
+            "length": "1",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+
+    },
+    "V149":{
+        "001": {
+            "length": "2",
+            "value": "17",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "7",
+            "value": "I103800",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "11",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "TOT_COUNT",
+            "multi": ""
+        },
+        "004": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "TOT_AMOUNT",
+            "multi": ""
+        },
+        "005": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "TOT_TAX",
+            "multi": ""
+        },
+        "006": {
+            "length": "11",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "BID_COUNT",
+            "multi": ""
+        },
+        "007": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "BID_AMOUNT",
+            "multi": ""
+        },
+        "008": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "BID_TAX",
+            "multi": ""
+        },
+        "009": {
+            "length": "11",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "MAC_COUNT",
+            "multi": ""
+        },
+        "010": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "MAC_AMOUNT",
+            "multi": ""
+        },
+        "011": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "MAC_TAX",
+            "multi": ""
+        },
+        "012": {
+            "length": "11",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "CAR_COUNT",
+            "multi": ""
+        },
+        "013": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "CAR_AMOUNT",
+            "multi": ""
+        },
+        "014": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "CAR_TAX",
+            "multi": ""
+        },
+        "015": {
+            "length": "11",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "ETC_COUNT",
+            "multi": ""
+        },
+        "016": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "ETC_AMOUNT",
+            "multi": ""
+        },
+        "017": {
+            "length": "13",
+            "value": "",
+            "blank": "0",
+            "table": "V149",
+            "field": "ETC_TAX",
+            "multi": ""
+        },
+        "018": {
+            "length": "6",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+
+    },
+    "V174":{
+        "001": {
+            "length": "2",
+            "value": "17",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "7",
+            "value": "I105600",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "V174",
+            "field": "TOT_COUNT",
+            "multi": ""
+        },
+        "004": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V174",
+            "field": "TOT_AMOUNT",
+            "multi": ""
+        },
+        "005": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "V174",
+            "field": "LC_COUNT",
+            "multi": ""
+        },
+        "006": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V174",
+            "field": "LC_AMOUNT",
+            "multi": ""
+        },
+        "007": {
+            "length": "7",
+            "value": "",
+            "blank": "0",
+            "table": "V174",
+            "field": "PUR_COUNT",
+            "multi": ""
+        },
+        "008": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "V174",
+            "field": "PUR_AMOUNT",
+            "multi": ""
+        },
+        "009": {
+            "length": "25",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+
+    },
+    "_V174_1":{
+        "001": {
+            "length": "2",
+            "value": "18",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "002": {
+            "length": "7",
+            "value": "I105600",
+            "blank": "",
+            "table": "",
+            "field": "",
+            "multi": ""
+        },
+        "003": {
+            "length": "6",
+            "value": "",
+            "blank": "0",
+            "table": "_V174_1",
+            "field": "LINE_SEQN",
+            "multi": ""
+        },
+        "004": {
+            "length": "1",
+            "value": "",
+            "blank": " ",
+            "table": "_V174_1",
+            "field": "LINE_TYPE",
+            "multi": ""
+        },
+        "005": {
+            "length": "35",
+            "value": "",
+            "blank": " ",
+            "table": "_V174_1",
+            "field": "LINE_DOC_NO",
+            "multi": ""
+        },
+        "006": {
+            "length": "8",
+            "value": "",
+            "blank": " ",
+            "table": "_V174_1",
+            "field": "LINE_ISSUE_DATE",
+            "multi": ""
+        },
+        "007": {
+            "length": "10",
+            "value": "",
+            "blank": " ",
+            "table": "_V174_1",
+            "field": "LINE_VAT_REG_NO",
+            "multi": ""
+        },
+        "008": {
+            "length": "15",
+            "value": "",
+            "blank": "0",
+            "table": "_V174_1",
+            "field": "LINE_AMOUNT",
+            "multi": ""
+        },
+        "009": {
+            "length": "16",
+            "value": "",
+            "blank": " ",
+            "table": "",
+            "field": "",
+            "multi": ""
+        }
+
     }
 }
